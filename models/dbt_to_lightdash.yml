@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: dbt_to_lightdash
+    schema: dbt_to_lightdash
+    tables:
+      - name: sample_superstore
+        description: sample superstore data
+        columns:
+          - name: row_id
+            description: row_id
+
