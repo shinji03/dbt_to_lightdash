@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: transform
+    schema: dbt_to_lightdash
+    description: "元データを型変換したテーブル"
+    columns:
+      - name: order_id
+      - name: order_date
+      - name: shipping_date
+      - name: shipping_mode
+      - name: customer_id
+      - name: customer_name
+      - name: customer_type
+      - name: city
+      - name: prefectures
+      - name: county
+      - name: region
+      - name: product_id
+      - name: sub_category
+      - name: product_name
+      - name: sales
+      - name: count
+      - name: discount_rate
+      - name: profit
