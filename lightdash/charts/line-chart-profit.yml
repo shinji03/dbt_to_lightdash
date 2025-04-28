@@ -1,0 +1,56 @@
+name: line_chart_profit
+description: null
+tableName: transform
+updatedAt: "2025-04-21T11:50:10.867Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_order_date_month
+  metrics:
+    - transform_profit_sum_profit
+  filters: {}
+  sorts:
+    - fieldId: transform_order_date_month
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: profit_sum_profit
+      label: sum_profit
+      description: "Sum of Profit on the table Transform "
+      uuid: 4b0c7296-c2f9-45cc-b5c9-bc5806eb7dc8
+      sql: ${TABLE}.profit
+      table: transform
+      type: sum
+      baseDimensionName: profit
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_order_date_month
+      yField:
+        - transform_profit_sum_profit
+      flipAxes: false
+    eChartsConfig:
+      series:
+        - type: line
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_profit_sum_profit
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: line-chart-profit
+tableConfig:
+  columnOrder:
+    - transform_order_date_month
+    - transform_profit_sum_profit
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

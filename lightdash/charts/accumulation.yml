@@ -1,0 +1,77 @@
+name: accumulation
+description: null
+tableName: transform
+updatedAt: "2025-04-25T12:00:04.258Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_order_date_year
+  metrics:
+    - transform_sales_sum_of_sales
+  filters:
+    dimensions:
+      id: 0784ccc1-f09c-405d-80d7-165a01c25d20
+      and:
+        - id: 80ea1f73-d664-4767-84f6-b49af15f8a3c
+          target:
+            fieldId: transform_sales
+          values: []
+          operator: equals
+  sorts:
+    - fieldId: transform_order_date_year
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations:
+    - name: accumulation_sum
+      displayName: accumulation_sum
+      sql: |2-
+          SUM(`transform_sales_sum_of_sales`) OVER (
+          ORDER BY
+            (`transform_order_date_year`)
+          ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        )
+      format:
+        type: default
+        currency: USD
+        separator: default
+      type: number
+  additionalMetrics:
+    - name: sales_sum_of_sales
+      label: Sum of Sales
+      description: "Sum of Sales on the table Transform "
+      uuid: bc26b324-669e-49c6-bba7-cbae4888bb9d
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_order_date_year
+      yField:
+        - transform_sales_sum_of_sales
+    eChartsConfig:
+      series:
+        - type: bar
+          encode:
+            xRef:
+              field: transform_order_date_year
+            yRef:
+              field: transform_sales_sum_of_sales
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: accumulation
+tableConfig:
+  columnOrder:
+    - transform_order_date_year
+    - transform_sales_sum_of_sales
+    - accumulation_sum
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

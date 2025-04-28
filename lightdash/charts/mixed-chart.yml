@@ -1,0 +1,79 @@
+name: mixed_chart
+description: null
+tableName: transform
+updatedAt: "2025-04-21T12:08:36.470Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_order_date_month
+  metrics:
+    - transform_count_sum_count
+    - transform_sales_sum_sales
+  filters: {}
+  sorts:
+    - fieldId: transform_order_date_month
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: count_sum_count
+      label: sum_count
+      description: "Sum of Count on the table Transform "
+      uuid: 82278703-8b90-4aba-9364-b3011b978d6c
+      sql: ${TABLE}.count
+      table: transform
+      type: sum
+      baseDimensionName: count
+      formatOptions:
+        type: number
+        separator: default
+    - name: sales_sum_sales
+      label: sum_sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 0301b189-d5cf-426c-8829-982cd91a7224
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_order_date_month
+      yField:
+        - transform_count_sum_count
+        - transform_sales_sum_sales
+    eChartsConfig:
+      series:
+        - type: line
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_count_sum_count
+          yAxisIndex: 0
+          isFilteredOut: false
+        - type: bar
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_sales_sum_sales
+          smooth: false
+          showSymbol: true
+          yAxisIndex: 1
+          isFilteredOut: false
+slug: mixed-chart
+tableConfig:
+  columnOrder:
+    - transform_order_date_month
+    - transform_count_sum_count
+    - transform_sales_sum_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

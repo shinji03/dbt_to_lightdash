@@ -1,0 +1,93 @@
+name: sample_super_store
+description: test
+updatedAt: "2025-04-28T11:56:30.566Z"
+tiles:
+  - x: 0
+    "y": 0
+    h: 2
+    w: 36
+    tabUuid: null
+    type: markdown
+    properties:
+      title: Test Dashbord
+      hideTitle: false
+      content: |-
+        sample super sotre
+
+        ここを変更して、追加したよ。
+
+        ここはローカルからアップロードした文章。
+  - x: 0
+    "y": 2
+    h: 7
+    w: 21
+    tabUuid: null
+    type: saved_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: area-chart
+    tileSlug: area-chart
+  - x: 21
+    "y": 2
+    h: 7
+    w: 8
+    tabUuid: null
+    type: saved_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: pie-chart-shipping-mode
+    tileSlug: pie-chart-shipping-mode
+  - x: 29
+    "y": 2
+    h: 7
+    w: 7
+    tabUuid: null
+    type: saved_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: funnel-sum-sales
+    tileSlug: funnel-sum-sales
+  - x: 0
+    "y": 9
+    h: 9
+    w: 36
+    tabUuid: null
+    type: saved_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: stuck-bar-chart
+    tileSlug: stuck-bar-chart
+filters:
+  metrics: []
+  dimensions:
+    - target:
+        fieldId: transform_city
+        fieldName: city
+        tableName: transform
+      values: []
+      disabled: true
+      operator: equals
+      required: false
+      tileTargets:
+        pie-chart-shipping-mode:
+          fieldId: transform_city
+          tableName: transform
+        funnel-sum-sales:
+          fieldId: transform_city
+          tableName: transform
+        area-chart:
+          fieldId: transform_city
+          tableName: transform
+        stuck-bar-chart:
+          fieldId: transform_city
+          tableName: transform
+  tableCalculations: []
+tabs: []
+slug: sample-super-store
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.877Z"

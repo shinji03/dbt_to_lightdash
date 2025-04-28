@@ -1,0 +1,59 @@
+name: custom_sql
+description: null
+tableName: transform
+updatedAt: "2025-04-24T11:33:41.186Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_city
+  metrics:
+    - transform_city_count_of_city
+  filters: {}
+  sorts:
+    - fieldId: transform_city_count_of_city
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: city_count_of_city
+      label: Count of City
+      description: "Count of City on the table Transform "
+      uuid: 8e249cfa-8ffd-4206-804a-10502960b336
+      sql: ${TABLE}.city
+      table: transform
+      type: count
+      baseDimensionName: city
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_city
+      yField:
+        - transform_city_count_of_city
+      flipAxes: false
+    eChartsConfig:
+      legend:
+        show: true
+        type: plain
+      series:
+        - type: bar
+          encode:
+            xRef:
+              field: transform_city
+            yRef:
+              field: transform_city_count_of_city
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: custom-sql
+tableConfig:
+  columnOrder:
+    - transform_city
+    - transform_city_count_of_city
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

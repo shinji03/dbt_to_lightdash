@@ -1,0 +1,67 @@
+name: custom_sql_2
+description: null
+tableName: transform
+updatedAt: "2025-04-24T12:10:49.801Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - test_case_when
+  metrics:
+    - transform_sales_sum_of_sales
+  filters: {}
+  sorts:
+    - fieldId: test_case_when
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum_of_sales
+      label: Sum of Sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 73a7636b-1bea-49ae-aa8d-7c23e9cdb392
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions:
+    - id: test_case_when
+      name: test_case_when
+      type: sql
+      table: transform
+      sql: |-
+        case
+            when ${transform.sales} < 11358 then "SMALL"
+            when ${transform.sales} < 34076 then "MIDIUM"
+            else "LARGE"
+        end
+      dimensionType: string
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: test_case_when
+      yField:
+        - transform_sales_sum_of_sales
+    eChartsConfig:
+      series:
+        - type: bar
+          encode:
+            xRef:
+              field: test_case_when
+            yRef:
+              field: transform_sales_sum_of_sales
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: custom-sql-2
+tableConfig:
+  columnOrder:
+    - test_case_when
+    - test_case_when
+    - transform_sales_sum_of_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

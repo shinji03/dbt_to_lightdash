@@ -1,0 +1,5069 @@
+name: scatter_chart
+description: null
+tableName: transform
+updatedAt: "2025-04-21T12:03:28.627Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_product_name
+  metrics:
+    - transform_sales_sum__sales
+    - transform_profit_sum__profit
+  filters: {}
+  sorts:
+    - fieldId: transform_product_name
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum__sales
+      label: sum _sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 9a73a446-5482-426e-8923-ea68cde4b4cd
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+    - name: profit_sum__profit
+      label: sum _profit
+      description: "Sum of Profit on the table Transform "
+      uuid: 9bfdc92d-1ae5-4c3a-b4bc-6055367cb259
+      sql: ${TABLE}.profit
+      table: transform
+      type: sum
+      baseDimensionName: profit
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_profit_sum__profit
+      yField:
+        - transform_sales_sum__sales
+      flipAxes: false
+    eChartsConfig:
+      xAxis:
+        - name: sum _profit
+      legend:
+        type: scroll
+        orient: horizontal
+      series:
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos クランプ, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos クランプ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos クランプ, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos クランプ, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ペーパー クリップ, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ペーパー クリップ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ペーパー クリップ, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ペーパー クリップ, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ホチキス, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ホチキス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ホチキス, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos ホチキス, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 押しピン, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 押しピン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 押しピン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 押しピン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 画鋲, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 画鋲, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 画鋲, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 画鋲, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 輪ゴム, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 輪ゴム, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 輪ゴム, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Accos 輪ゴム, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme はさみ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme はさみ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme はさみ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme はさみ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme カッター ナイフ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme カッター ナイフ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme カッター ナイフ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme ペーパー ナイフ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme ペーパー ナイフ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme ペーパー ナイフ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme ペーパー ナイフ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 大型のはさみ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 大型のはさみ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 大型のはさみ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 大型のはさみ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 定規, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 定規, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 定規, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 定規, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 裁断機, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 裁断機, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 裁断機, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Acme 裁断機, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus クランプ, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus クランプ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus クランプ, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus クランプ, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ドア ストッパー, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ドア ストッパー, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ドア ストッパー, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ドア ストッパー, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フォト フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フォト フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フォト フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フォト フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ペーパー クリップ, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ペーパー クリップ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ペーパー クリップ, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ペーパー クリップ, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ホチキス, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ホチキス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ホチキス, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus ホチキス, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 押しピン, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 押しピン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 押しピン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 押しピン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 時計, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 時計, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 時計, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 時計, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 画鋲, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 画鋲, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 画鋲, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 画鋲, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 積み重ねトレイ, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 積み重ねトレイ, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 積み重ねトレイ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 積み重ねトレイ, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 輪ゴム, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 輪ゴム, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 輪ゴム, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 輪ゴム, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 電球, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 電球, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 電球, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Advantus 電球, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames クラフト封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames クラフト封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames クラフト封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames クラフト封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames テープ付き, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames テープ付き, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames テープ付き, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames テープ付き, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 各種封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 各種封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 各種封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 各種封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 業務用封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 業務用封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 業務用封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 社内用封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 社内用封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 社内用封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 社内用封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 茶封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 茶封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 茶封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Ames 茶封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery とじ機, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery とじ機, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery とじ機, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery とじ機, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery タブ, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery タブ, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery タブ, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery タブ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー カバー, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー カバー, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー カバー, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー カバー, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery バインダー, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery ファイル フォルダ ラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery ファイル フォルダ ラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery ファイル フォルダ ラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery ファイル フォルダ ラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 丸型ラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 丸型ラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 丸型ラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 丸型ラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 取り外し可能ラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 取り外し可能ラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 取り外し可能ラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 取り外し可能ラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 法的提出用ラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 法的提出用ラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 法的提出用ラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 法的提出用ラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴あけパンチ, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴あけパンチ, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴あけパンチ, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴あけパンチ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴の補強テープ, エコノミー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴の補強テープ, クリア
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴の補強テープ, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 穴の補強テープ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 色分けラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 色分けラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 色分けラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 色分けラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 輸送用ラベル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 輸送用ラベル, 調整可能
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 輸送用ラベル, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Avery 輸送用ラベル, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC キャンバス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC キャンバス, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC キャンバス, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC キャンバス, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC スケッチ帳, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC スケッチ帳, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC スケッチ帳, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC スケッチ帳, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC マーカー, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC マーカー, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC マーカー, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC マーカー, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 蛍光ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 蛍光ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 蛍光ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 蛍光ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 鉛筆削り, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 鉛筆削り, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 鉛筆削り, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: BIC 鉛筆削り, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コンピュータ用机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コンピュータ用机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コンピュータ用机, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コーヒー テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コーヒー テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コーヒー テーブル, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks コーヒー テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 丸型テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 丸型テーブル, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 会議机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 会議机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 会議机, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 教育用机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 教育用机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 教育用机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 木製テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 木製テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Barricks 木製テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コンピュータ用机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コンピュータ用机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コンピュータ用机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コーヒー テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コーヒー テーブル, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis コーヒー テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 丸型テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 丸型テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 会議机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 会議机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 会議机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 教育用机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 教育用机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 教育用机, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 木製テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bevis 木製テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith キャンバス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith キャンバス, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith キャンバス, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith キャンバス, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith スケッチ帳, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith スケッチ帳, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith スケッチ帳, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith スケッチ帳, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith マーカー, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith マーカー, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith マーカー, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith マーカー, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 蛍光ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 蛍光ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 蛍光ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 蛍光ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 鉛筆削り, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 鉛筆削り, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 鉛筆削り, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Binney & Smith 鉛筆削り, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston キャンバス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston キャンバス, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston キャンバス, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston キャンバス, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston スケッチ帳, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston スケッチ帳, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston スケッチ帳, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston スケッチ帳, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston マーカー, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston マーカー, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston マーカー, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston マーカー, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 蛍光ペン, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 蛍光ペン, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 蛍光ペン, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 蛍光ペン, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 鉛筆削り, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 鉛筆削り, 各種サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 鉛筆削り, 大容量パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Boston 鉛筆削り, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush キャビネット, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush キャビネット, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush キャビネット, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush キャビネット, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush クラシック スタイルの本棚, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush クラシック スタイルの本棚, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush クラシック スタイルの本棚, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush クラシック スタイルの本棚, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush コーナー シェルフ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush コーナー シェルフ, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush コーナー シェルフ, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush コーナー シェルフ, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 書庫, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 書庫, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 書庫, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 書庫, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 本棚, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 本棚, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 本棚, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 本棚, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 棚セット, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 棚セット, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 棚セット, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Bush 棚セット, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo クラフト封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo クラフト封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo クラフト封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo クラフト封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo テープ付き, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo テープ付き, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo テープ付き, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo テープ付き, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 各種封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 各種封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 各種封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 各種封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 業務用封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 業務用封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 業務用封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 業務用封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 社内用封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 社内用封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 社内用封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 社内用封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 茶封筒, 50 枚セット
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 茶封筒, シルバー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 茶封筒, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Cameo 茶封筒, 赤
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コンピュータ用机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コンピュータ用机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コーヒー テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コーヒー テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コーヒー テーブル, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft コーヒー テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 丸型テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 丸型テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 丸型テーブル, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 丸型テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 会議机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 会議机, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 会議机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 教育用机, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 教育用机, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 教育用机, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 木製テーブル, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 木製テーブル, 組み立て済み
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Chromcraft 木製テーブル, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania キャビネット, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania キャビネット, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania キャビネット, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania キャビネット, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania クラシック スタイルの本棚, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania クラシック スタイルの本棚, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania クラシック スタイルの本棚, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania クラシック スタイルの本棚, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania コーナー シェルフ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania コーナー シェルフ, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania コーナー シェルフ, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania コーナー シェルフ, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 書庫, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 書庫, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 書庫, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 書庫, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 本棚, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 本棚, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 本棚, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 本棚, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 棚セット, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 棚セット, 従来型
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 棚セット, 白
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Dania 棚セット, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O ドア ストッパー, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O ドア ストッパー, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O ドア ストッパー, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O ドア ストッパー, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フォト フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フォト フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フォト フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フォト フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 時計, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 時計, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 時計, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 時計, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 積み重ねトレイ, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 積み重ねトレイ, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 積み重ねトレイ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 積み重ねトレイ, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 電球, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 電球, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 電球, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Deflect-O 電球, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton スケジュール帳, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton スケジュール帳, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton スケジュール帳, マルチカラー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton スケジュール帳, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton ノート, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton ノート, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton ノート, マルチカラー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton ノート, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton メモ用紙, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton メモ用紙, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton メモ用紙, マルチカラー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton メモ用紙, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton リーム, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton リーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton リーム, マルチカラー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton リーム, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 事務用品, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 事務用品, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 事務用品, マルチカラー
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 事務用品, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 硫酸紙, 12 パック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 硫酸紙, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eaton 硫酸紙, リサイクル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon トレイ, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon トレイ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon トレイ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon トレイ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ドア ストッパー, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ドア ストッパー, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ドア ストッパー, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ドア ストッパー, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ファイル カート, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ファイル カート, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ファイル カート, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ファイル カート, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォト フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォト フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォト フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォト フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォルダ, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォルダ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォルダ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フォルダ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フレーム, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フレーム, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フレーム, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon フレーム, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ボックス, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ボックス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ボックス, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ボックス, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ロッカー, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ロッカー, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ロッカー, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon ロッカー, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 時計, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 時計, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 時計, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 時計, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 棚, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 棚, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 棚, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 棚, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 積み重ねトレイ, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 積み重ねトレイ, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 積み重ねトレイ, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 積み重ねトレイ, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 電球, プレミアム
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 電球, マルチパック
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 電球, 高耐久性
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Eldon 電球, 黒
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite はさみ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite はさみ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite はさみ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite はさみ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite カッター ナイフ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite カッター ナイフ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite カッター ナイフ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite カッター ナイフ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite ペーパー ナイフ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite ペーパー ナイフ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite ペーパー ナイフ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite ペーパー ナイフ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 大型のはさみ, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 大型のはさみ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 大型のはさみ, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 大型のはさみ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 定規, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 定規, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 定規, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 定規, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 裁断機, スチール
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 裁断機, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 裁断機, 長方形
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Elite 裁断機, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes トレイ, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes トレイ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes トレイ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes トレイ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ファイル カート, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ファイル カート, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ファイル カート, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ファイル カート, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes フォルダ, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes フォルダ, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes フォルダ, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes フォルダ, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ボックス, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ボックス, メタル
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ボックス, 業務用
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ボックス, 青
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ロッカー, フル サイズ
+          yAxisIndex: 0
+        - type: scatter
+          encode:
+            xRef:
+              field: transform_profit_sum__profit
+            yRef:
+              field: transform_sales_sum__sales
+              pivotValues:
+                - field: transform_product_name
+                  value: Fellowes ロッカー, メタル
+          yAxisIndex: 0
+pivotConfig:
+  columns:
+    - transform_product_name
+slug: scatter-chart
+tableConfig:
+  columnOrder:
+    - transform_product_name
+    - transform_sales_sum__sales
+    - transform_profit_sum__profit
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"
