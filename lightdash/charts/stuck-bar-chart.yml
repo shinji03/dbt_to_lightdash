@@ -1,0 +1,268 @@
+name: stuck_bar_chart
+description: null
+tableName: transform
+updatedAt: "2025-04-17T11:56:41.782Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_region
+    - transform_sub_category
+  metrics:
+    - transform_sales_sum_sales
+  filters: {}
+  sorts:
+    - fieldId: transform_region
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum_sales
+      label: sum_sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 0bbb3fc0-74ab-48d4-a2f7-1e7f9e2713f3
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_region
+      yField:
+        - transform_sales_sum_sales
+      flipAxes: true
+      showGridX: false
+    eChartsConfig:
+      xAxis:
+        - rotate: 10
+          inverse: false
+          sortType: bar_totals
+      yAxis:
+        - name: ""
+        - name: ""
+      legend:
+        type: plain
+        orient: horizontal
+      series:
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 椅子
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 文房具
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: テーブル
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 紙
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: バインダー
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 事務機器
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 保管箱
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: コピー機
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 電話機
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: アプライアンス
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 封筒
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 画材
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: ラベル
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 付属品
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 本棚
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: クリップ
+          yAxisIndex: 1
+          isFilteredOut: false
+        - type: bar
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_region
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_sub_category
+                  value: 家具
+          yAxisIndex: 1
+          isFilteredOut: false
+pivotConfig:
+  columns:
+    - transform_sub_category
+slug: stuck-bar-chart
+tableConfig:
+  columnOrder:
+    - transform_region
+    - transform_sub_category
+    - transform_sales_sum_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

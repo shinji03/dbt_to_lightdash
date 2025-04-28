@@ -1,0 +1,61 @@
+name: funnel_sum_sales
+description: null
+tableName: transform
+updatedAt: "2025-04-17T11:42:32.491Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_shipping_mode
+  metrics:
+    - transform_sales_sum_sales
+  filters:
+    dimensions:
+      id: 2daee04b-ea8b-4177-ae24-ca1d4b6a02fe
+      and:
+        - id: bc83d8dc-2d3d-48a3-ad37-f623b6aa8a37
+          target:
+            fieldId: transform_customer_type
+          values:
+            - 大企業
+          operator: equals
+          required: false
+  sorts:
+    - fieldId: transform_shipping_mode
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum_sales
+      label: sum_sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 599d70b5-e4e3-42a0-ad4a-867429089c16
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: funnel
+  config:
+    labels:
+      position: right
+      showValue: true
+      showPercentage: false
+    fieldId: transform_sales_sum_sales
+    dataInput: column
+    showLegend: true
+    colorOverrides: {}
+    labelOverrides: {}
+    legendPosition: horizontal
+slug: funnel-sum-sales
+tableConfig:
+  columnOrder:
+    - transform_shipping_mode
+    - transform_sales_sum_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

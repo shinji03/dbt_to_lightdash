@@ -1,0 +1,63 @@
+name: pie_chart_Shipping_mode
+description: null
+tableName: transform
+updatedAt: "2025-04-17T11:30:57.075Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_shipping_mode
+  metrics:
+    - transform_sales_sum_of_sales
+  filters: {}
+  sorts:
+    - fieldId: transform_shipping_mode
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum_of_sales
+      label: Sum of Sales
+      description: "Sum of Sales on the table Transform "
+      uuid: 7ce0f35b-9001-4158-8945-3c217702213c
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: pie
+  config:
+    isDonut: true
+    metricId: transform_sales_sum_of_sales
+    showValue: false
+    showLegend: true
+    valueLabel: hidden
+    groupFieldIds:
+      - transform_shipping_mode
+    legendPosition: horizontal
+    showPercentage: true
+    groupSortOverrides: []
+    groupColorOverrides:
+      通常配送: "#5470c6"
+    groupLabelOverrides: {}
+    legendMaxItemLength: 50
+    groupValueOptionOverrides:
+      通常配送:
+        showValue: false
+        valueLabel: hidden
+        showPercentage: false
+      セカンド クラス:
+        valueLabel: hidden
+        showPercentage: false
+slug: pie-chart-shipping-mode
+tableConfig:
+  columnOrder:
+    - transform_shipping_mode
+    - transform_sales_sum_of_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

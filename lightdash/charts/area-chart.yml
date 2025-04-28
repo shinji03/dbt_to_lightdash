@@ -1,0 +1,92 @@
+name: area_chart
+description: null
+tableName: transform
+updatedAt: "2025-04-21T11:45:53.100Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_customer_type
+    - transform_order_date_month
+  metrics:
+    - transform_sales_sum_sales
+  filters: {}
+  sorts:
+    - fieldId: transform_order_date_month
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: sales_sum_sales
+      label: sum_sales
+      description: "Sum of Sales on the table Transform "
+      uuid: abd99df0-f895-45f9-a605-64c92f126579
+      sql: ${TABLE}.sales
+      table: transform
+      type: sum
+      baseDimensionName: sales
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_order_date_month
+      yField:
+        - transform_sales_sum_sales
+      flipAxes: false
+    eChartsConfig:
+      series:
+        - type: line
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_customer_type
+                  value: 大企業
+          areaStyle: {}
+          yAxisIndex: 0
+          isFilteredOut: false
+        - type: line
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_customer_type
+                  value: 消費者
+          areaStyle: {}
+          yAxisIndex: 0
+          isFilteredOut: false
+        - type: line
+          stack: transform_sales_sum_sales
+          encode:
+            xRef:
+              field: transform_order_date_month
+            yRef:
+              field: transform_sales_sum_sales
+              pivotValues:
+                - field: transform_customer_type
+                  value: 小規模事業所
+          areaStyle: {}
+          yAxisIndex: 0
+          isFilteredOut: false
+pivotConfig:
+  columns:
+    - transform_customer_type
+slug: area-chart
+tableConfig:
+  columnOrder:
+    - transform_customer_type
+    - transform_order_date_month
+    - transform_sales_sum_sales
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

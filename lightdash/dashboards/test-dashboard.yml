@@ -1,0 +1,35 @@
+name: test dashboard
+description: sample super store
+updatedAt: "2025-03-28T12:08:37.202Z"
+tiles:
+  - x: 4
+    "y": 0
+    h: 9
+    w: 15
+    tabUuid: null
+    type: sql_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: test-1
+    tileSlug: test-1
+  - x: 19
+    "y": 0
+    h: 9
+    w: 15
+    tabUuid: null
+    type: sql_chart
+    properties:
+      title: ""
+      hideTitle: false
+      chartSlug: test-2
+    tileSlug: test-2
+filters:
+  metrics: []
+  dimensions: []
+  tableCalculations: []
+tabs: []
+slug: test-dashboard
+spaceSlug: sampl-super-store
+version: 1
+downloadedAt: "2025-04-28T11:59:34.877Z"

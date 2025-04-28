@@ -1,0 +1,59 @@
+name: bar_sum_sales
+description: null
+tableName: transform
+updatedAt: "2025-04-17T11:51:25.367Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - transform_customer_type
+  metrics:
+    - transform_profit_average_of_profit
+  filters: {}
+  sorts:
+    - fieldId: transform_customer_type
+      descending: false
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: profit_average_of_profit
+      label: Average of Profit
+      description: "Average of Profit on the table Transform "
+      round: 2
+      uuid: 0b682d35-3fc4-4dfc-a366-1130d55cf86d
+      sql: ${TABLE}.profit
+      table: transform
+      type: average
+      baseDimensionName: profit
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions: []
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: transform_customer_type
+      yField:
+        - transform_profit_average_of_profit
+    eChartsConfig:
+      series:
+        - type: bar
+          label:
+            show: true
+            position: top
+          encode:
+            xRef:
+              field: transform_customer_type
+            yRef:
+              field: transform_profit_average_of_profit
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: bar-sum-sales
+tableConfig:
+  columnOrder:
+    - transform_customer_type
+    - transform_profit_average_of_profit
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"

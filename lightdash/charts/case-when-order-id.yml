@@ -1,0 +1,67 @@
+name: case_when_order_id
+description: null
+tableName: transform
+updatedAt: "2025-04-24T12:19:31.611Z"
+metricQuery:
+  exploreName: transform
+  dimensions:
+    - sml
+  metrics:
+    - transform_order_id_count_of_order_id
+  filters: {}
+  sorts:
+    - fieldId: sml
+      descending: true
+  limit: 500
+  metricOverrides: {}
+  tableCalculations: []
+  additionalMetrics:
+    - name: order_id_count_of_order_id
+      label: Count of Order id
+      description: "Count of Order id on the table Transform "
+      uuid: 747b6977-50cf-4c21-9851-332a3e644646
+      sql: ${TABLE}.order_id
+      table: transform
+      type: count
+      baseDimensionName: order_id
+      formatOptions:
+        type: number
+        separator: default
+  customDimensions:
+    - id: sml
+      name: sml
+      type: sql
+      table: transform
+      sql: |-
+        case
+            when (`transform`.sales) < 11358 then "SMALL"
+            when (`transform`.sales) < 34076 then "MIDIUM"
+            else "LARGE"
+        end
+      dimensionType: string
+chartConfig:
+  type: cartesian
+  config:
+    layout:
+      xField: sml
+      yField:
+        - transform_order_id_count_of_order_id
+    eChartsConfig:
+      series:
+        - type: bar
+          encode:
+            xRef:
+              field: sml
+            yRef:
+              field: transform_order_id_count_of_order_id
+          yAxisIndex: 0
+          isFilteredOut: false
+slug: case-when-order-id
+tableConfig:
+  columnOrder:
+    - sml
+    - sml
+    - transform_order_id_count_of_order_id
+spaceSlug: shared
+version: 1
+downloadedAt: "2025-04-28T11:59:34.820Z"
