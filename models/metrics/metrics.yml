@@ -1,0 +1,11 @@
+# schema.yml
+version: 2
+models:
+  - name: 'orders'
+    columns:
+      - name: 'order_date'
+      - name: 'sales'
+        meta:
+          metrics:
+            total_sales:
+              type: sum
