@@ -7,6 +7,10 @@ models:
     columns:
       - name: order_id
       - name: order_date
+        meta:
+          dimension:
+            type: date
+            time_intervals: ['DAY', 'WEEK']
       - name: shipping_date
       - name: shipping_mode
       - name: customer_id
@@ -20,6 +24,19 @@ models:
       - name: sub_category
       - name: product_name
       - name: sales
+        meta:
+          metrics:
+            total_sales:
+              type: sum
       - name: count
       - name: discount_rate
       - name: profit
+        meta:
+          metrics:
+            avg_price:
+              type: average
+            surplus:
+              type: boolean
+              sql: 'IF(${avg_price} > {profit}, TRUE, FALSE)'
+          dimension:
+            format: '"↑"#,##;"△"#,##;"◯"0'
