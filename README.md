@@ -1,1 +1,3 @@
 # dbt_to_lightdash
+
+dbtのデータをlightdashで取り込むためのコードを作成
