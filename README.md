@@ -2,6 +2,7 @@
 
 dbtのデータをlightdashで取り込むためのコードを作成
 
+````
 dbt_to_lightdash/
 ├── analyses/          # 分析用SQLファイル
 ├── lightdash/         # Lightdash関連の設定ファイル
@@ -13,3 +14,4 @@ dbt_to_lightdash/
 ├── dbt_project.yml    # dbtプロジェクト設定ファイル
 ├── README.md          # プロジェクトの説明（このファイル）
 └── .gitignore         # Gitで無視するファイル
+````
